@@ -1,6 +1,6 @@
 import MarkdownIt from "markdown-it";
-import State from "markdown-it/lib/rules_core/state_core";
-import Token from "markdown-it/lib/token";
+import State from "markdown-it/lib/rules_core/state_core.mjs";
+import Token from "markdown-it/lib/token.mjs";
 
 function tightenList(tokens: Token[]) {
     let iteratedElements = 0;

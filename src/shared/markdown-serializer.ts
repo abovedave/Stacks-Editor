@@ -10,7 +10,7 @@ import {
     supportedTagAttributes,
     TagType,
 } from "./html-helpers";
-import { normalizeReference } from "markdown-it/lib/common/utils";
+import { normalizeReference } from "markdown-it/lib/common/utils.mjs";
 import { IExternalPluginProvider } from "./editor-plugin";
 
 // helper type so the code is a tad less messy

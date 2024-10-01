@@ -1,4 +1,4 @@
-import { escapeHtml } from "markdown-it/lib/common/utils";
+import { escapeHtml } from "markdown-it/lib/common/utils.mjs";
 import { EditorState } from "prosemirror-state";
 import { error } from "./logger";
 

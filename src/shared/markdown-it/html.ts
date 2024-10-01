@@ -1,6 +1,6 @@
-import MarkdownIt from "markdown-it";
-import State from "markdown-it/lib/rules_core/state_core";
-import Token from "markdown-it/lib/token";
+import type MarkdownIt from "markdown-it";
+import type State from "markdown-it/lib/rules_core/state_core.mjs";
+import Token from "markdown-it/lib/token.mjs";
 import {
     blockElements,
     selfClosingElements,
@@ -98,7 +98,7 @@ function getTagInfo(tag: string): TagInfo {
         // <img title="asdfas" src="asdfasdf" /> becomes <img />
         // the `s` flag makes `.` match newlines, while `[^\S\r\n]` is `\s` without newline matches
         // this essentially strips out extraneous newlines that are found intertwined with the rest of the attributes
-        markup = tag.replace(/^(<[a-z]+).*?([^\S\r\n]?\/?>)$/is, "$1$2");
+        markup = tag.replace(/^(<[a-z]+)[\s\S]*?([^\S\r\n]?\/?>)$/i, "$1$2");
     }
 
     const attributes: { [name: string]: string } = {};

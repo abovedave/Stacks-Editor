@@ -1,7 +1,7 @@
 import MarkdownIt from "markdown-it";
-import { normalizeReference } from "markdown-it/lib/common/utils";
-import State from "markdown-it/lib/rules_core/state_core";
-import Token from "markdown-it/lib/token";
+import Token from "markdown-it/lib/token.mjs";
+import { normalizeReference } from "markdown-it/lib/common/utils.mjs";
+import type State from "markdown-it/lib/rules_core/state_core.mjs";
 
 type LinkReference = { title?: string; href?: string };
 type LinkReferences = { [key: string]: LinkReference };

@@ -1,7 +1,7 @@
 import type MarkdownIt from "markdown-it";
-import type ParserInline from "markdown-it/lib/parser_inline";
-import type StateInline from "markdown-it/lib/rules_inline/state_inline";
-import type Token from "markdown-it/lib/token";
+import type { RuleInline } from "markdown-it/lib/parser_inline.mjs";
+import type StateInline from "markdown-it/lib/rules_inline/state_inline.mjs";
+import type Token from "markdown-it/lib/token.mjs";
 import type { EditorPlugin } from "../../src";
 
 // simple proof of concept that adds furigana support from https://japanese.meta.stackexchange.com/questions/806/how-should-i-format-my-questions-on-japanese-language-se/807#807
@@ -118,7 +118,7 @@ function findEndChar(
     return labelEnd;
 }
 
-const mdJSEPlugin: ParserInline.RuleInline = function (state, silent) {
+const mdJSEPlugin: RuleInline = function (state, silent) {
     const startCharCode = state.src.charCodeAt(state.pos);
 
     // quick fail on first character

@@ -1,6 +1,6 @@
 import MarkdownIt from "markdown-it";
-import State from "markdown-it/lib/rules_core/state_core";
-import Token from "markdown-it/lib/token";
+import type State from "markdown-it/lib/rules_core/state_core.mjs";
+import type Token from "markdown-it/lib/token.mjs";
 
 function addHardbreakMarkup(tokens: Token[], parent: Token = null) {
     for (let i = 0; i < tokens.length; i++) {

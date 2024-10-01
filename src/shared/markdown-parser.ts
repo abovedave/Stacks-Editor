@@ -1,5 +1,5 @@
-import MarkdownIt from "markdown-it/lib";
-import Token from "markdown-it/lib/token";
+import MarkdownIt from "markdown-it";
+import Token from "markdown-it/lib/token.mjs";
 import { defaultMarkdownParser, MarkdownParser } from "prosemirror-markdown";
 import { NodeType, Schema } from "prosemirror-model";
 import { IExternalPluginProvider } from "./editor-plugin";

@@ -1,6 +1,6 @@
-import MarkdownIt from "markdown-it/lib";
-import StateBlock from "markdown-it/lib/rules_block/state_block";
-import State from "markdown-it/lib/rules_core/state_core";
+import MarkdownIt from "markdown-it";
+import StateBlock from "markdown-it/lib/rules_block/state_block.mjs";
+import type State from "markdown-it/lib/rules_core/state_core.mjs";
 
 function langCommentParser(
     matcher: RegExp,

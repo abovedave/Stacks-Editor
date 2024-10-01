@@ -1,5 +1,5 @@
 import MarkdownIt from "markdown-it";
-import Token from "markdown-it/lib/token";
+import type Token from "markdown-it/lib/token.mjs";
 import { hardbreak_markup } from "../../../src/shared/markdown-it/hardbreak-markup";
 
 describe("hardbreak-markup", () => {
@@ -7,7 +7,7 @@ describe("hardbreak-markup", () => {
     const hardbreak = (rendered: Token[]) =>
         rendered
             .find((t) => t.type === "inline")
-            .children.find((t) => t.type === "hardbreak");
+            .children.find((t: Token) => t.type === "hardbreak");
 
     it("should detect backslash hardbreaks", () => {
         // NOTE: String.raw used here because we want that backslash as a literal character
