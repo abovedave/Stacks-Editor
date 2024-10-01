@@ -1,3 +1,4 @@
+import { jest } from "@jest/globals";
 import { CodeStringParser } from "../../src/shared/schema";
 import { EditorState, TextSelection } from "prosemirror-state";
 import { commonmarkSchema } from "../../src/commonmark/schema";

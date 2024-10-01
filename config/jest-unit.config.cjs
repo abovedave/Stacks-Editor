@@ -1,7 +1,8 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 module.exports = {
-    preset: "ts-jest",
+    preset: "ts-jest/presets/default-esm",
     testEnvironment: "jsdom",
+    extensionsToTreatAsEsm: [".ts"],
     moduleNameMapper: {
         "\\.svg$": "<rootDir>/test/__mocks__/svgMock.ts",
     },
@@ -16,6 +17,7 @@ module.exports = {
             "ts-jest",
             {
                 tsconfig: "<rootDir>/test/tsconfig.json",
+                useESM: true,
             },
         ],
     },

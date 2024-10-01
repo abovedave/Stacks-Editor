@@ -1,3 +1,4 @@
+import { jest } from "@jest/globals";
 import { RichTextEditor } from "../../src/rich-text/editor";
 import * as mdp from "../../src/shared/markdown-parser";
 import { externalPluginProvider, normalize } from "../test-helpers";

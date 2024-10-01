@@ -1,5 +1,7 @@
 import type MarkdownIt from "markdown-it";
-import StateBlock, { ParentType } from "markdown-it/lib/rules_block/state_block.mjs";
+import StateBlock, {
+    ParentType,
+} from "markdown-it/lib/rules_block/state_block.mjs";
 import { isSpace } from "markdown-it/lib/common/utils.mjs";
 
 type BlockquoteExtOptions = {

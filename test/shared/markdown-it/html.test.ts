@@ -1,3 +1,4 @@
+import { jest } from "@jest/globals";
 import MarkdownIt from "markdown-it";
 import { html } from "../../../src/shared/markdown-it/html";
 

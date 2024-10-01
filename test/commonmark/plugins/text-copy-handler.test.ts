@@ -1,3 +1,4 @@
+import { jest } from "@jest/globals";
 import { textCopyHandlerPlugin } from "../../../src/commonmark/plugins/text-copy-handler";
 import { applySelection, createView } from "../../rich-text/test-helpers";
 import { createState } from "../test-helpers";

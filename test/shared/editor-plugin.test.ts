@@ -1,3 +1,4 @@
+import { jest } from "@jest/globals";
 import MarkdownIt from "markdown-it";
 import { Plugin } from "prosemirror-state";
 import { ExternalPluginProvider } from "../../src/shared/editor-plugin";

@@ -1,3 +1,4 @@
+import { jest } from "@jest/globals";
 import { createState, createView } from "../../rich-text/test-helpers";
 import { caseNormalizeKeymap } from "../../../src/shared/prosemirror-plugins/case-normalize-keymap";
 
