@@ -9,6 +9,7 @@ import {
     MenuCommandExtended,
     MenuItem,
 } from "../../../src/shared/menu";
+import { Command } from "prosemirror-state";
 
 describe("menu helpers", () => {
     it("should makeMenuButton", () => {
@@ -94,7 +95,7 @@ describe("menu helpers", () => {
     });
 
     it("should makeMenuDropdown", () => {
-        const fn = jest.fn();
+        const fn = jest.fn<Command>();
         const commands = {
             command: expect.any(Function) as () => boolean,
             active: fn,
@@ -137,8 +138,8 @@ describe("menu helpers", () => {
 
     it("should makeDropdownItem", () => {
         const commands = {
-            richText: jest.fn(),
-            commonmark: jest.fn(),
+            richText: jest.fn<Command>(),
+            commonmark: jest.fn<Command>(),
         };
 
         const item = makeDropdownItem("label", commands, "key", ["class1"]);

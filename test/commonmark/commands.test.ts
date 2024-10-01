@@ -5,6 +5,7 @@ import { commonmarkSchema } from "../../src/commonmark/schema";
 import * as commands from "../../src/commonmark/commands";
 import { MenuCommand } from "../../src/shared/menu";
 import { getSelectedText } from "../test-helpers";
+import type { TagLinkOptions } from "../../src/shared/view";
 
 /**
  * Creates a state with the content optionally selected if selectFrom/To are passed
@@ -683,7 +684,7 @@ some text`;
         });
 
         it("should pass appropriate params to validate call", () => {
-            const spy = jest.fn();
+            const spy = jest.fn<TagLinkOptions["validate"]>();
 
             // check for isMetaTag = false; text = "text1"
             commands.insertTagLinkCommand(

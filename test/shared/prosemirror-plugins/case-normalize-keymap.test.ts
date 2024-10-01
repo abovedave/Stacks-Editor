@@ -1,11 +1,12 @@
 import { jest } from "@jest/globals";
 import { createState, createView } from "../../rich-text/test-helpers";
 import { caseNormalizeKeymap } from "../../../src/shared/prosemirror-plugins/case-normalize-keymap";
+import { Command } from "prosemirror-state";
 
 describe("case-normalize-keymap", () => {
     it("should normalize the event with the key letter in lowercase when the shift modifier is NOT pressed", () => {
-        const zLowercaseMockCommand = jest.fn();
-        const zUppercaseMockCommand = jest.fn();
+        const zLowercaseMockCommand = jest.fn<Command>();
+        const zUppercaseMockCommand = jest.fn<Command>();
         const view = createView(
             createState("", [
                 caseNormalizeKeymap({
@@ -25,8 +26,8 @@ describe("case-normalize-keymap", () => {
     });
 
     it("should normalize the event with the key letter in uppercase when the shift modifier is pressed", () => {
-        const zLowercaseMockCommand = jest.fn();
-        const zUppercaseMockCommand = jest.fn();
+        const zLowercaseMockCommand = jest.fn<Command>();
+        const zUppercaseMockCommand = jest.fn<Command>();
         const view = createView(
             createState("", [
                 caseNormalizeKeymap({
@@ -47,7 +48,7 @@ describe("case-normalize-keymap", () => {
     });
 
     it("should not normalize keyboard events when their key is not a letter", () => {
-        const mockCommand = jest.fn();
+        const mockCommand = jest.fn<Command>();
         const view = createView(
             createState("", [
                 caseNormalizeKeymap({ "Shift-Enter": mockCommand }),
